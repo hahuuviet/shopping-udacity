@@ -24,4 +24,3 @@ Use the following command to launch the development server:
 <bash>ng serve --port 3000</bash>
 
  After starting the server, open your browser and go to http://localhost:3000/product. The application will automatically refresh whenever you make changes to the source code.
-# Your Project Title
