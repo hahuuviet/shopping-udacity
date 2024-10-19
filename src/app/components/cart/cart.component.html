@@ -1,0 +1,76 @@
+<div class="cart-page-wrapper">
+  <h1>Your Shopping Cart</h1>
+
+  <div class="cart-content">
+    <!-- Cart Items Section -->
+    <div class="cart-items-section">
+      <h2>Items in Your Cart</h2>
+
+      <div class="cart-item" *ngFor="let item of cartItems">
+        <img src="{{ item.product.url }}" alt="{{ item.product.name }}" class="cart-item-img" />
+        <div class="cart-item-details">
+          <h3 class="cart-item-name">{{ item.product.name }}</h3>
+          <p class="cart-item-description">{{ item.product.description }}</p>
+
+          <!-- Quantity Controls -->
+          <div class="cart-quantity-controls">
+            <button class="cart-quantity-btn" (click)="decrementQuantity(item)">-</button>
+            <input type="number" class="cart-quantity-input" [(ngModel)]="item.quantity" (ngModelChange)="modifyQuantity(item)" min="1" />
+            <button class="cart-quantity-btn" (click)="incrementQuantity(item)">+</button>
+          </div>
+        </div>
+
+        <span class="cart-item-price">
+          ${{ item.product.price * item.quantity | number:'1.2-2' }}
+        </span>
+      </div>
+
+      <!-- Total Price -->
+      <div class="cart-total">
+        Total: ${{ totalBill | number:'1.2-2' }}
+      </div>
+    </div>
+
+    <!-- Order Form Section -->
+    <div class="cart-order-form">
+      <h2>Order Information</h2>
+      <form (ngSubmit)="submitOrder()">
+        <div class="form-group">
+          <label for="name">Full Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            maxlength="20"
+            [(ngModel)]="fullName"
+            #name="ngModel"
+          />
+          <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+            Full Name is required.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            maxlength="10"
+            [(ngModel)]="phoneNumber"
+            #phone="ngModel"
+            pattern="[0-9]*"
+            (keypress)="restrictToNumbers($event)"
+          />
+          <div *ngIf="phone.invalid && (phone.dirty || phone.touched)" class="alert alert-danger">
+            Phone Number is required.
+          </div>
+        </div>
+
+        <button type="submit" class="submit-order-btn">Confirm Order</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,154 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.cart-page-wrapper {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 14px 32px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  text-align: center;
+  color: #2e7d32;
+  margin-bottom: 30px;
+}
+
+.cart-content {
+  display: flex;
+  gap: 30px;
+}
+
+/* Cart Items Section */
+.cart-items-section {
+  flex: 2;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.cart-item-details {
+  flex-grow: 1;
+  margin-left: 15px;
+}
+
+.cart-item-name {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.cart-item-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.cart-item-price {
+  font-size: 18px;
+  color: #388e3c;
+  font-weight: bold;
+}
+
+/* Quantity Controls */
+.cart-quantity-controls {
+  display: flex;
+  align-items: center;
+}
+
+.cart-quantity-btn {
+  background-color: #ddd;
+  border: none;
+  padding: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cart-quantity-input {
+  width: 50px;
+  text-align: center;
+  border: 1px solid #ddd;
+  margin: 0 10px;
+}
+
+/* Total Price */
+.cart-total {
+  text-align: right;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Order Form Section */
+.cart-order-form {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.submit-order-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #2e7d32;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-order-btn:hover {
+  background-color: #1b5e20;
+}
+
+.alert {
+  color: #e74c3c;
+  margin-top: 5px;
+}

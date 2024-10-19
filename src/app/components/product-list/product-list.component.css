@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #eef2f3;
+}
+
+.product-list-container {
+  max-width: 1000px; /* Set the maximum width for the container */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #2e7d32;
+  margin-bottom: 30px;
+}
+
+.product-grid-wrapper {
+  display: flex;
+  flex-direction: column; /* Layout the products vertically */
+  gap: 20px; /* Space between each product */
+}
+
+.single-product-card {
+  width: 100%; /* Make the product card take full width */
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.single-product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.single-product-card img {
+  width: 150px; /* Limit image size in line layout */
+  height: auto;
+  object-fit: cover;
+  margin-right: 20px; /* Space between image and product info */
+}

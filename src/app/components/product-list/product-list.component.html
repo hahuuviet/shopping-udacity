@@ -1,0 +1,13 @@
+<div class="product-list-container">
+  <h1>Available Products</h1>
+  <div class="product-grid-wrapper">
+    <div class="single-product-card" *ngFor="let product of products">
+      <app-product-item
+        [product]="product"
+        (addToCart)="onAddToCart($event)"
+        class="single-product-card"
+      >
+      </app-product-item>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="product-item-wrapper">
+  <img
+    src="{{ product.url }}"
+    alt="{{ product.name }}"
+    class="product-thumbnail"
+    (click)="onImageClick()"
+  />
+  <div class="product-details">
+    <div class="product-title">{{ product.name }}</div>
+    <div class="product-price">${{ product.price }}</div>
+    <div class="quantity-selector">
+      <label>
+        <select [(ngModel)]="selectedQuantity">
+          <option *ngFor="let qty of [1, 2, 3, 4, 5]" [value]="qty">
+            {{ qty }}
+          </option>
+        </select>
+      </label>
+    </div>
+    <div class="product-description">
+      {{ product.description }}
+    </div>
+    <button class="add-to-cart-btn" (click)="onAddToCart()">Add to Cart</button>
+  </div>
+</div>

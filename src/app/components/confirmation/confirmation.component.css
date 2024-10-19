@@ -1,0 +1,96 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #f0f0f0;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.confirmation-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative; /* For absolute positioning of fireworks */
+  overflow: hidden; /* Ensure fireworks stay within card */
+}
+
+.icon {
+  color: #28a745; /* Green color for success */
+  font-size: 48px;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 24px; /* Increased font size for better visibility */
+}
+
+p {
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.customer-name {
+  font-weight: bold;
+  color: #28a745; /* Changed to green */
+}
+
+.total-bill {
+  font-size: 1.5rem; /* Increased size for emphasis */
+  font-weight: bold;
+  color: #28a745; /* Changed to green */
+  margin-top: 1rem;
+}
+
+.button {
+  background-color: #28a745; /* Changed button color to green */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.3s; /* Added transform transition */
+}
+
+.button:hover {
+  background-color: #218838; /* Darker shade of green on hover */
+  transform: scale(1.05); /* Slight scaling effect */
+}
+
+/* Firework animation */
+.firework {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  opacity: 0;
+  animation: firework-animation 1s forwards;
+}
+
+@keyframes firework-animation {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+}
